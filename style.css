@@ -1,0 +1,636 @@
+/* ============================================
+   style.css – Ben Wong Fan Page
+   modern, responsive, fully styled
+   ============================================ */
+
+/* ----- RESET & BASE ----- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: #faf8f5;
+    color: #1e2a2f;
+    line-height: 1.5;
+}
+
+/* ----- TYPOGRAPHY & UTILITIES ----- */
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 32px;
+}
+
+.section-label {
+    display: inline-block;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background: #eae3d7;
+    padding: 6px 14px;
+    border-radius: 40px;
+    font-weight: 600;
+    color: #5a3e2b;
+    margin-bottom: 1rem;
+}
+
+.section-label i {
+    margin-right: 6px;
+}
+
+h2 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 1.2rem;
+    color: #1f2e2b;
+    letter-spacing: -0.01em;
+}
+
+/* ----- NAVIGATION (regular flow, not fixed) ----- */
+.main-nav {
+    background: white;
+    border-bottom: 1px solid #e2dfda;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+    position: relative;   /* not absolute, not fixed */
+    top: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+.nav-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0.9rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.nav-brand {
+    font-weight: 800;
+    font-size: 1.5rem;
+    letter-spacing: -0.5px;
+}
+
+.brand-name {
+    color: #b1622c;
+    background: linear-gradient(135deg, #a3511d, #c67a40);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.brand-tag {
+    font-size: 0.85rem;
+    font-weight: 400;
+    color: #7f6b5a;
+    margin-left: 6px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-item {
+    text-decoration: none;
+    font-weight: 600;
+    color: #2c3e2f;
+    transition: 0.2s;
+    font-size: 1rem;
+}
+
+.nav-item:hover {
+    color: #c96f2c;
+    border-bottom: 2px solid #c96f2c;
+    padding-bottom: 4px;
+}
+
+/* ----- HERO SECTION ----- */
+.hero {
+    background: #fefaf5;
+    padding: 3rem 2rem 4rem 2rem;
+}
+
+.hero-content {
+    max-width: 1280px;
+    margin: 0 auto;
+    display: flex;
+    align-items: stretch;   /* same height for text column and image column */
+    gap: 3rem;
+    flex-wrap: wrap;
+}
+
+.hero-text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hero-badge {
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    color: #b97f49;
+    margin-bottom: 1rem;
+}
+
+.hero-title {
+    font-size: 4.2rem;
+    font-weight: 800;
+    line-height: 1.1;
+    color: #2d3e3a;
+    margin-bottom: 0.5rem;
+    letter-spacing: -0.02em;
+}
+
+.hero-sub {
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: #b1622c;
+    margin-bottom: 1.5rem;
+    border-left: 3px solid #d99e4a;
+    padding-left: 1rem;
+}
+
+.hero-description p {
+    color: #3b4a44;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.hero-description .quote {
+    font-style: italic;
+    background: #f0ebe2;
+    padding: 0.8rem 1rem;
+    border-radius: 28px;
+    color: #5a4a38;
+    font-weight: 500;
+    font-size: 0.95rem;
+}
+
+.hero-description .quote i {
+    margin-right: 8px;
+    color: #b1622c;
+}
+
+.hero-stats {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 1.8rem;
+    flex-wrap: wrap;
+}
+
+.hero-stats span {
+    background: #fff;
+    border-radius: 60px;
+    padding: 8px 20px;
+    font-weight: 600;
+    font-size: 0.85rem;
+    color: #1e2a2f;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+    border: 1px solid #e9e0d5;
+}
+
+.hero-stats i {
+    margin-right: 8px;
+    color: #c27334;
+}
+
+/* HERO IMAGE (right side, same height as hero) */
+.hero-image {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #f2ede6;
+    border-radius: 32px;
+    padding: 1rem;
+    min-height: 100%;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.02);
+}
+
+.hero-img {
+    width: 100%;
+    height: auto;
+    max-height: 550px;
+    object-fit: cover;
+    border-radius: 24px;
+    box-shadow: 0 12px 28px rgba(0,0,0,0.1);
+    background: #d9cebf;
+    transition: transform 0.2s;
+}
+
+.hero-img:hover {
+    transform: scale(1.01);
+}
+
+.photo-caption {
+    font-size: 0.75rem;
+    margin-top: 12px;
+    color: #7e6b58;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+}
+
+/* ----- ABOUT SECTION (second main photo) ----- */
+.about {
+    padding: 5rem 2rem;
+    background: #ffffff;
+    border-top: 1px solid #efe6dd;
+    border-bottom: 1px solid #efe6dd;
+}
+
+.about-inner {
+    display: flex;
+    gap: 4rem;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.about-text-block {
+    flex: 1.2;
+}
+
+.about-text-block h2 {
+    font-size: 2rem;
+    margin-top: 0.5rem;
+}
+
+.about-text-block p {
+    margin-bottom: 1rem;
+    color: #2f3e38;
+}
+
+.fun-fact {
+    background: #fff6ef;
+    border-left: 5px solid #c96f2c;
+    padding: 1rem 1.2rem;
+    border-radius: 20px;
+    margin-top: 1.8rem;
+    font-weight: 500;
+    color: #5d4a33;
+    font-size: 0.95rem;
+}
+
+.fun-fact i {
+    margin-right: 10px;
+    color: #b1622c;
+}
+
+.about-image-block {
+    flex: 1;
+    position: relative;
+    text-align: center;
+}
+
+.second-main-photo {
+    width: 100%;
+    max-width: 480px;
+    border-radius: 32px;
+    box-shadow: 0 20px 30px -12px rgba(0,0,0,0.15);
+    border: 4px solid #f6ede3;
+    background: #e1d5c7;
+    transition: 0.2s;
+}
+
+.img-badge {
+    position: absolute;
+    bottom: -12px;
+    right: 10%;
+    background: #c96f2c;
+    color: white;
+    padding: 6px 18px;
+    border-radius: 60px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* ----- BUS SECTION (iconic HK buses) ----- */
+.buses {
+    padding: 5rem 2rem;
+    background: #fdf8f2;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.section-header h2 {
+    margin-bottom: 0.5rem;
+}
+
+.header-sub {
+    color: #5c6e64;
+    max-width: 680px;
+    margin: 0 auto;
+    font-size: 1rem;
+}
+
+.bus-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.bus-card {
+    background: white;
+    border-radius: 28px;
+    overflow: hidden;
+    width: 100%;
+    max-width: 360px;
+    box-shadow: 0 12px 24px -12px rgba(0,0,0,0.08);
+    transition: all 0.25s ease;
+    border: 1px solid #efe3d6;
+}
+
+.bus-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 22px 30px -12px rgba(0,0,0,0.12);
+}
+
+.bus-img-wrapper {
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+    background: #cdc2b2;
+}
+
+.bus-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.bus-card:hover .bus-img {
+    transform: scale(1.03);
+}
+
+.bus-info {
+    padding: 1.5rem;
+}
+
+.bus-info h3 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 0.3rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 8px;
+}
+
+.bus-era {
+    font-size: 0.7rem;
+    background: #f2e4d8;
+    padding: 2px 10px;
+    border-radius: 40px;
+    font-weight: 500;
+    color: #b1622c;
+}
+
+.bus-info p {
+    color: #4c5b53;
+    margin: 0.8rem 0 1rem;
+    line-height: 1.45;
+}
+
+.bus-tag {
+    font-size: 0.7rem;
+    color: #a5815d;
+    background: #faf3ea;
+    display: inline-block;
+    padding: 5px 12px;
+    border-radius: 30px;
+    font-weight: 500;
+}
+
+.bus-note {
+    margin-top: 3rem;
+    text-align: center;
+    background: #eae0d4;
+    padding: 0.8rem 1rem;
+    border-radius: 50px;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 0.85rem;
+    color: #5f4c37;
+}
+
+.bus-note i {
+    margin-right: 6px;
+}
+
+/* ----- FAN SPOT SECTION ----- */
+.fan-spot {
+    padding: 4rem 2rem;
+    background: #2d3e3a;
+    color: #fef3e6;
+}
+
+.fan-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.fan-quote-card {
+    flex: 2;
+    background: rgba(255,245,235,0.08);
+    backdrop-filter: blur(2px);
+    padding: 2rem;
+    border-radius: 40px;
+    border-left: 4px solid #dd9e64;
+}
+
+.fan-icon {
+    font-size: 2rem;
+    color: #f3bc7c;
+    margin-bottom: 0.5rem;
+}
+
+.fan-quote-card h3 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    letter-spacing: -0.2px;
+}
+
+.fan-quote-card p {
+    font-size: 1.1rem;
+    line-height: 1.5;
+    font-style: italic;
+    margin-bottom: 1rem;
+}
+
+.fan-signature {
+    font-weight: 500;
+    color: #e9c9a7;
+    font-size: 0.9rem;
+}
+
+.fan-next-events {
+    flex: 1;
+    background: #fef6ec;
+    padding: 1.8rem;
+    border-radius: 32px;
+    color: #2d3e3a;
+    text-align: center;
+}
+
+.fan-next-events i {
+    font-size: 2rem;
+    color: #c96f2c;
+    margin-bottom: 0.5rem;
+}
+
+.fan-next-events h4 {
+    font-weight: 800;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.micro-tag {
+    display: inline-block;
+    margin-top: 0.8rem;
+    font-size: 0.7rem;
+    background: #e3cfbb;
+    padding: 4px 12px;
+    border-radius: 60px;
+    font-weight: 600;
+}
+
+/* ----- FOOTER ----- */
+.footer {
+    background: #1e2a2b;
+    color: #cfc6ba;
+    padding: 2.5rem 2rem;
+    border-top: 1px solid #3e534b;
+}
+
+.footer-content {
+    max-width: 1280px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.footer-left p {
+    margin-bottom: 0.5rem;
+    font-size: 0.85rem;
+}
+
+.footer-small {
+    font-size: 0.7rem;
+    opacity: 0.7;
+}
+
+.footer-right {
+    display: flex;
+    gap: 1.5rem;
+    font-weight: 500;
+    font-size: 0.85rem;
+}
+
+.footer-right span i {
+    margin-right: 5px;
+}
+
+/* ----- RESPONSIVE DESIGN (mobile friendly) ----- */
+@media (max-width: 880px) {
+    .hero-content {
+        flex-direction: column;
+    }
+    .hero-image {
+        order: 2;
+        margin-top: 1rem;
+    }
+    .hero-text {
+        order: 1;
+    }
+    .hero-title {
+        font-size: 3rem;
+    }
+    .about-inner {
+        flex-direction: column;
+    }
+    .nav-container {
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+    .nav-links {
+        gap: 1.2rem;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .bus-grid {
+        gap: 1.5rem;
+    }
+    .fan-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 0.8rem;
+    }
+    .footer-right {
+        justify-content: center;
+    }
+    .hero-stats {
+        justify-content: center;
+    }
+    .hero-description .quote {
+        font-size: 0.9rem;
+    }
+    .section-header h2 {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 560px) {
+    .hero-title {
+        font-size: 2.4rem;
+    }
+    h2 {
+        font-size: 1.7rem;
+    }
+    .container {
+        padding: 0 20px;
+    }
+    .hero, .about, .buses, .fan-spot {
+        padding: 2.5rem 1rem;
+    }
+    .nav-links {
+        gap: 1rem;
+    }
+    .bus-card {
+        max-width: 100%;
+    }
+}
