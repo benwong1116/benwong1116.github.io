@@ -216,15 +216,16 @@ h2 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: #f2ede6;
+    background: #ffffff;
     padding: 1rem;
     min-height: 100%;
 }
 
 .hero-img {
     width: auto;
-    height: 250px;
+    height: 550px;
     max-height: 550px;
+    top: 0px;
     object-fit: cover;
     transition: transform 0.2s;
 }
