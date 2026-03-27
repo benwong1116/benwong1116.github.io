@@ -118,7 +118,7 @@ h2 {
 
 /* ----- HERO SECTION ----- */
 .hero {
-    background: #fefaf5;
+    background: #fff;
     padding: 3rem 2rem 4rem 2rem;
 }
 
@@ -223,8 +223,7 @@ h2 {
 
 .hero-img {
     width: auto;
-    height: 550px;
-    max-height: 550px;
+    height: 320px;
     top: 0px;
     object-fit: cover;
     transition: transform 0.2s;
@@ -245,7 +244,7 @@ h2 {
 /* ----- ABOUT SECTION (second main photo) ----- */
 .about {
     padding: 5rem 2rem;
-    background: #ffffff;
+    background: #7e6b58;
     border-top: 1px solid #efe6dd;
     border-bottom: 1px solid #efe6dd;
 }
@@ -268,7 +267,7 @@ h2 {
 
 .about-text-block p {
     margin-bottom: 1rem;
-    color: #2f3e38;
+    color: #fefaf5;
 }
 
 .fun-fact {
