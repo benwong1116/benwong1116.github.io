@@ -224,7 +224,7 @@ h2 {
 
 .hero-img {
     width: auto;
-    height: 100px;
+    height: 250px;
     max-height: 550px;
     object-fit: cover;
     transition: transform 0.2s;
